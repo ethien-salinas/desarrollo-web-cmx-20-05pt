@@ -1,18 +1,14 @@
-var router = require('express').Router();
+var router = require('express').Router()
+const {
+    crearMascota,
+    obtenerMascotas,
+    modificarMascota,
+    eliminarMascota
+  } = require('../controllers/mascotas')
 
-router.get('/', (req, res) => {
-    res.send('Todos las mascotas');
-})
-router.post('/', (req, res) => {
-    res.send('Mascota creada');
-})
-router.put('/:id', (req, res) => {
-    var id = req.params.id
-    res.send(`Mascota ${id} modificada`);
-})
-router.delete('/:id', (req, res) => {
-    var id = req.params.id
-    res.send(`Mascota ${id} eliminada`);
-})
+router.get('/', obtenerMascotas)
+router.post('/', crearMascota)
+router.put('/:id', modificarMascota)
+router.delete('/:id', eliminarMascota)
 
 module.exports = router;
