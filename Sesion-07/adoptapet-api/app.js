@@ -1,6 +1,15 @@
 var express = require('express'),
   bodyParser = require('body-parser'),
   cors = require('cors');
+var mongoose = require("mongoose");
+
+mongoose.connect(
+  "mongodb+srv://ethien:JF2_vA_eNHqGJ8_@cluster0.slsyk.mongodb.net/<dbname>?retryWrites=true&w=majority"
+);
+mongoose.set("debug", true);
+
+require("./models/Usuario");
+require('./config/passport');
 
 // Objeto global de la app
 var app = express();
