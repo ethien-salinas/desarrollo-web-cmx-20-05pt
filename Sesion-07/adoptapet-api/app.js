@@ -4,7 +4,7 @@ var express = require('express'),
 var mongoose = require("mongoose");
 
 mongoose.connect(
-  "mongodb+srv://ethien:JF2_vA_eNHqGJ8_@cluster0.slsyk.mongodb.net/<dbname>?retryWrites=true&w=majority"
+  "mongodb+srv://ethien:<password>@cluster0.slsyk.mongodb.net/dev-adoptapet?retryWrites=true&w=majority"
 );
 mongoose.set("debug", true);
 
