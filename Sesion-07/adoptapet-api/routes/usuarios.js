@@ -1,9 +1,9 @@
 var router = require('express').Router();
 const {
-    crearUsuario,
-    obtenerUsuarios,
-    modificarUsuario,
-    eliminarUsuario
+  crearUsuario,
+  obtenerUsuarios,
+  modificarUsuario,
+  eliminarUsuario
 } = require('../controllers/usuarios')
 
 router.get('/', obtenerUsuarios)

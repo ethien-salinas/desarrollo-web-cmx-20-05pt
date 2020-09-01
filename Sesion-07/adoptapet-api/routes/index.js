@@ -1,7 +1,7 @@
 var route = require('express').Router()
 
 route.get('/', (req, res) => {
-    res.send('welcome to adoptapet api')
+  res.send('welcome to adoptapet api')
 })
 
 route.use('/anunciantes', require('./anunciantes'))

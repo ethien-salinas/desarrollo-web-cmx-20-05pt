@@ -1,10 +1,10 @@
 var router = require('express').Router()
 const {
-    crearMascota,
-    obtenerMascotas,
-    modificarMascota,
-    eliminarMascota
-  } = require('../controllers/mascotas')
+  crearMascota,
+  obtenerMascotas,
+  modificarMascota,
+  eliminarMascota
+} = require('../controllers/mascotas')
 
 router.get('/', obtenerMascotas)
 router.post('/', crearMascota)
